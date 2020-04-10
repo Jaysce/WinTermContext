@@ -10,6 +10,7 @@ A PowerShell script that creates an option in the file explorer context menu to 
 2. Clone this repo to the root (C:\\>)
 
 3. Unblock the install.ps1 script so it can run.
+
 ![Unblock script](https://i.imgur.com/DbN4OAY.png)
 
 4. Run the install.ps1 script as Admin from PowerShell
