@@ -24,7 +24,7 @@ else {
     New-ItemProperty -Path "$location\WindowsTerminal" -Name "Icon" -Value "C:\\WinTermContext\\Icon\\terminal.ico" -PropertyType 'String'
 
     # Create new key called command in WindowsTerminal
-    New-Item -Path "$location\WindowsTerminal" -Name 'command' -Value "C:\\Users\\$user\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+    New-Item -Path "$location\WindowsTerminal" -Name 'command' -Value "C:\\Users\\$user\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe -d ."
 
     # Create new key called WindowsTerminalAdmin
     New-Item -Path "$location" -Name 'WindowsTerminalAdmin' -Value "Open Terminal as Admin here"
@@ -32,7 +32,7 @@ else {
     New-ItemProperty -Path "$location\WindowsTerminalAdmin" -Name "Icon" -Value "C:\\WinTermContext\\Icon\\terminal.ico" -PropertyType 'String'
 
     # Create new key called command in WindowsTerminalAdmin
-    New-Item -Path "$location\WindowsTerminalAdmin" -Name 'command' -Value 'Powershell -WindowStyle Hidden -Command "& { Start-Process "wt.exe" -Verb RunAs}"'
+    New-Item -Path "$location\WindowsTerminalAdmin" -Name 'command' -Value "Powershell -WindowStyle Hidden -Command `"Start-Process wt.exe -ArgumentList '-d .' -Verb runAs`"" -ItemType 'String'
     
     Pop-Location
 
