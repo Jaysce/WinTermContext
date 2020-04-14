@@ -11,10 +11,9 @@ Set-Location $location
 
 # Test if the 'WindowsTerminal' key or 'WindowsTerminalAdmin' key already exists
 if (Test-Path "$location\WindowsTerminal") {
-    Write-Verbose 'Key already exists' -Verbose
-}
-elseif (Test-Path "$location\WindowsTerminalAdmin") {
-    Write-Verbose 'Key already exists' -Verbose
+    Write-Verbose 'Uninstalling' -Verbose
+    Remove-Item -Path "$location\WindowsTerminal" -Recurse
+    Remove-Item -Path "$location\WindowsTerminalAdmin" -Recurse
 }
 else {
 
