@@ -11,4 +11,6 @@ A PowerShell script that creates an option in the file explorer context menu to 
    PowerShell as Admin and running `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` 
 
 3. Run the install.ps1 script as Admin from PowerShell
-`C:\WinTermContext> .\install.ps1` 
+`C:\WinTermContext> .\install-uninstall.ps1` 
+
+> To uninstall run the the script again
